@@ -22,7 +22,7 @@ If you wish to explore different ISPC command line arguments when compiling an i
 ![alt text](https://github.com/tsinghua-15418/assignment1/raw/master/readme_figures/fig1.jpg "")
 
 2. Ensure "Configurations" and "Platform" are both set to "Active", and change the text in the "Command Line" row.
-![alt text](https://github.com/tsinghua-15418/assignment1/raw/master/readme_figures/fig1.jpg "")
+![alt text](https://github.com/tsinghua-15418/assignment1/raw/master/readme_figures/fig2.jpg "")
 
 Note that you'll need the "--arch=x86" argument if you are building 32bit applications (Win32 platform), and the "--arch=x86-64" when building 64bit applications (x64).
 
