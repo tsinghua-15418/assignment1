@@ -89,11 +89,11 @@ int main(int argc, char** argv) {
 	for (int i = 1; i < argc; i++) {
 		if (i < argc - 1)
 		{
-			if (stricmp(argv[i], "-threads") == 0 || stricmp(argv[i], "t") == 0)
+			if (strcmp(argv[i], "-threads") == 0 || strcmp(argv[i], "t") == 0)
 			{
 				numThreads = atoi(argv[i + 1]);
 			}
-			else if (stricmp(argv[i], "-view") == 0 || stricmp(argv[i], "-v") == 0)
+			else if (strcmp(argv[i], "-view") == 0 || strcmp(argv[i], "-v") == 0)
 			{
 				int viewIndex = atoi(argv[i + 1]);
 				// change view settings
@@ -111,7 +111,7 @@ int main(int argc, char** argv) {
 		}
 		else
 		{
-			if (stricmp(argv[i], "-help") == 0 || stricmp(argv[i], "-?") == 0)
+			if (strcmp(argv[i], "-help") == 0 || strcmp(argv[i], "-?") == 0)
 			{
 				usage(argv[0]);
 				return 1;

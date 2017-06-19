@@ -1,4 +1,4 @@
-CXX=g++ -m64
+CXX=g++ -std=c++11 -m64
 CXXFLAGS=-I../common -Iobjs/ -O3 -Wall
 ISPC=ispc
 # note: change target to avx-x2 for AVX capable machines

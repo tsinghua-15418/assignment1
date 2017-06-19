@@ -28,7 +28,7 @@ int main(int argc, char * argv[]) {
   for (int i = 1; i < argc; i++) {
 	  if (i < argc - 1)
 	  {
-		  if (stricmp(argv[i], "-size") == 0 || stricmp(argv[i], "-s") == 0)
+		  if (strcmp(argv[i], "-size") == 0 || strcmp(argv[i], "-s") == 0)
 		  {
 			  N = atoi(argv[i + 1]);
 			  if (N <= 0) {
@@ -39,12 +39,12 @@ int main(int argc, char * argv[]) {
 	  }
 	  else
 	  {
-		  if (stricmp(argv[i], "help") == 0 || stricmp(argv[i], "?") == 0)
+		  if (strcmp(argv[i], "help") == 0 || strcmp(argv[i], "?") == 0)
 		  {
 			  usage(argv[0]);
 			  return 1;
 		  }
-		  else if (stricmp(argv[i], "-log") == 0 || stricmp(argv[i], "-l") == 0)
+		  else if (strcmp(argv[i], "-log") == 0 || strcmp(argv[i], "-l") == 0)
 		  {
 			  printLog = true;
 		  }
