@@ -27,4 +27,4 @@ If you wish to explore different ISPC command line arguments when compiling an i
 Note that you'll need the "--arch=x86" argument if you are building 32bit applications (Win32 platform), and the "--arch=x86-64" when building 64bit applications (x64).
 
 # Build on Linux
-Instructions for building on Linux is included in the [course website](http://15418.courses.cs.cmu.edu/spring2016/article/3).
+Instructions for building on Linux is included in the [course website](http://15418.courses.cs.cmu.edu/tsinghua2017/article/3).
