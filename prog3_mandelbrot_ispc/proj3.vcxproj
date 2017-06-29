@@ -22,6 +22,7 @@
     <VCProjectVersion>15.0</VCProjectVersion>
     <ProjectGuid>{7567D9CE-7AD5-4D58-BB22-084C3D2375F5}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
+    <WindowsTargetPlatformVersion>10.0.15063.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -141,10 +142,10 @@
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(OutputPath)%(Filename).obj</Outputs>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(OutputPath)%(Filename).obj</Outputs>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(OutputPath)%(Filename).obj</Outputs>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(SolutionDir)../ispc/ispc.exe %(Filename).ispc --target=sse4-x2 --arch=x86 --woff -o "$(OutputPath)%(Filename).obj"</Command>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(SolutionDir)../ispc/ispc.exe %(Filename).ispc --target=sse4-x2 --woff -o "$(OutputPath)%(Filename).obj"</Command>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(SolutionDir)../ispc/ispc.exe %(Filename).ispc --target=sse4-x2 --arch=x86 --woff -o "$(OutputPath)%(Filename).obj"</Command>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(SolutionDir)../ispc/ispc.exe %(Filename).ispc --target=sse4-x2 --woff -o "$(OutputPath)%(Filename).obj"</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(SolutionDir)ispc/ispc.exe %(Filename).ispc --target=sse4-x2 --arch=x86 --woff -o "$(OutputPath)%(Filename).obj"</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(SolutionDir)ispc/ispc.exe %(Filename).ispc --target=sse4-x2 --woff -o "$(OutputPath)%(Filename).obj"</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(SolutionDir)ispc/ispc.exe %(Filename).ispc --target=sse4-x2 --arch=x86 --woff -o "$(OutputPath)%(Filename).obj"</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(SolutionDir)ispc/ispc.exe %(Filename).ispc --target=sse4-x2 --woff -o "$(OutputPath)%(Filename).obj"</Command>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>

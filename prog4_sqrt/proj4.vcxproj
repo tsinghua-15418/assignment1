@@ -22,6 +22,7 @@
     <VCProjectVersion>15.0</VCProjectVersion>
     <ProjectGuid>{D75BD562-C3E2-4F68-B38B-65DC9B2B8529}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
+    <WindowsTargetPlatformVersion>10.0.15063.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -141,6 +142,10 @@
   <ItemGroup>
     <CustomBuild Include="sqrt.ispc">
       <FileType>Document</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(SolutionDir)ispc/ispc.exe %(Filename).ispc --arch=x86-64 --woff -o "$(OutputPath)%(Filename).obj"</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(SolutionDir)ispc/ispc.exe %(Filename).ispc --arch=x86 --woff -o "$(OutputPath)%(Filename).obj"</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(SolutionDir)ispc/ispc.exe %(Filename).ispc --arch=x86 --woff -o "$(OutputPath)%(Filename).obj"</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(SolutionDir)ispc/ispc.exe %(Filename).ispc --arch=x86-64 --woff -o "$(OutputPath)%(Filename).obj"</Command>
     </CustomBuild>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
